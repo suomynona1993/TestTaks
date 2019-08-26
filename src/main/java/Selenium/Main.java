@@ -21,8 +21,7 @@ public class Main {
     public static void main( String[] args)   {
 
 
-        ChromeDriverService servicePort = ChromeDriverService.createDefaultService();
-        servicePort.
+
         WebDriver currentChromeDriver = new ChromeDriver();
 
         currentChromeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // Устанавливаем неявное ожидание для драйвера,
