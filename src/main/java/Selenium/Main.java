@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -20,8 +21,10 @@ public class Main {
     public static void main( String[] args)   {
 
 
-
+        ChromeDriverService servicePort = ChromeDriverService.createDefaultService();
+        servicePort.
         WebDriver currentChromeDriver = new ChromeDriver();
+
         currentChromeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // Устанавливаем неявное ожидание для драйвера,
                                                                                // на всякий случай, если забудем где-то указать явное.
 
@@ -59,6 +62,7 @@ public class Main {
             currentChromeDriver.quit();
             return;
         }
+
 
 
         try {
